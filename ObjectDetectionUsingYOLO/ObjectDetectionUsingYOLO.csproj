@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
     <Folder Include="wwwroot\AI-Model\" />
     <Folder Include="wwwroot\outputs\" />
     <Folder Include="wwwroot\uploads\" />
