@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Upload Image";
+}
+
+<h2>Upload Image for Object Detection</h2>
+
+<form asp-action="Upload" enctype="multipart/form-data" method="post">
+    <input type="file" name="file" required />
+    <button type="submit">Upload & Detect</button>
+</form>

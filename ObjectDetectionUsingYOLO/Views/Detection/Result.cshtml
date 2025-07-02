@@ -1,0 +1,20 @@
+﻿@{
+    var imagePath = ViewBag.ImagePath as string;
+    var detections = ViewBag.Detections as List<ObjectDetectionUsingYOLO.Models.DetectionInput>;
+}
+
+<h2>Detection Result</h2>
+
+@if (!string.IsNullOrEmpty(imagePath))
+{
+    <img src="@imagePath" style="max-width: 800px;" />
+}
+
+<ul>
+    @foreach (var det in detections)
+    {
+        <li>@det.Label — @($"{det.Confidence:P1}")</li>
+    }
+</ul>
+
+<a href="/Detection/Index">Upload another image</a>
